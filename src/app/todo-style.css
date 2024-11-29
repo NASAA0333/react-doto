@@ -1,7 +1,7 @@
 * {
   margin: 0;
 }
-#add-task-button {
+.add-task-button {
   color: white;
   background-color: green;
   border-radius: 4px;
@@ -9,7 +9,7 @@
   height: 44px;
   font-size: 16px;
 }
-#add-task-button-2 {
+.add-task-button-2 {
   color: white;
   background-color: green;
   border-radius: 4px;
@@ -18,22 +18,22 @@
   height: 44px;
   margin-top: 50px;
 }
-#main {
+.main {
   display: flex;
   justify-content: center;
   background-color: rgba(26, 26, 26, 1);
 }
-#main-inside {
+.main-inside {
   margin-top: 52px;
   max-width: 1280px;
 }
-#header {
+.header {
   /* min-width: 1280px; */
   display: flex;
   justify-content: end;
   height: 44px;
 }
-#box-header {
+.box-header {
   display: flex;
   max-width: 240px;
   align-items: center;
@@ -42,13 +42,13 @@
   margin-left: auto;
   margin-right: auto;
 }
-#title {
+.title {
   color: white;
   font-size: 18px;
   display: flex;
   background-color: black;
 }
-#white-sircle {
+.white-sircle {
   width: 12px;
   height: 12px;
   background-color: white;
@@ -56,7 +56,7 @@
   display: flex;
   margin: 0 10px 0 10px;
 }
-#yellow-sircle {
+.yellow-sircle {
   width: 12px;
   height: 12px;
   background-color: yellow;
@@ -64,7 +64,7 @@
   display: flex;
   margin: 0 10px 0 10px;
 }
-#green-sircle {
+.green-sircle {
   width: 12px;
   height: 12px;
   background-color: green;
@@ -72,7 +72,7 @@
   display: flex;
   margin: 0 10px 0 10px;
 }
-#red-sircle {
+.red-sircle {
   width: 12px;
   height: 12px;
   background-color: red;
@@ -80,7 +80,7 @@
   display: flex;
   margin: 0 10px 0 10px;
 }
-#todo-item {
+.todo-item {
   background-color: rgba(26, 26, 26, 1);
   color: gray;
   max-width: 240px;
@@ -92,36 +92,36 @@
   border-radius: 8px;
   /* justify-content: space-between; */
 }
-#all-black-box {
+.all-black-box {
   /* min-width: 1280px; */
   display: flex;
   justify-content: space-between;
   margin: 24px auto auto auto;
   gap: 50px;
 }
-#black-box {
+.black-box {
   width: 280px;
   height: 672px;
   background-color: black;
   border-radius: 12px;
   border: 1px gray solid;
 }
-#modal {
+.modal {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   display: none;
   color: white;
 }
-#modal-content {
+.modal-content {
   margin: 100px auto;
   width: 370px;
   height: 376px;
-  background-color: #1e1e1e;
+  background-color: 0.11ee1e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +130,7 @@
   flex-direction: column;
   color: white;
 }
-#add-text {
+.add-text {
   color: white;
 }
 select {
@@ -150,7 +150,7 @@ input {
   background-color: rgba(26, 26, 26, 1);
 }
 
-#meter {
+.meter {
   margin: 0 0 0 auto;
   color: gray;
 }
