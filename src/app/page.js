@@ -1,25 +1,20 @@
+"use client";
+
+import { useState } from "react";
 export default function Home() {
-  const nasaa = [
-    {
-      name: "nasanbuyan",
-      age: 18,
-      gender: "male",
-    },
-    {
-      name: "bataa",
-      age: 20,
-      gender: "male",
-    },
-  ];
+  const [index, setIndex] = useState(0);
+  
   return (
-    <div className="flex justify-center flex-col gap-4">
-      {nasaa.map((item) => (
-        <div className="flex gap-4">
-          <div>{item.name}</div>
-          <div>{item.age}</div>
-          <div>{item.gender}</div>
-        </div>
-      ))}
-    </div>
+    <>
+      <button type="button" onClick={() => setIndex(index + 1)} className="">
+        +
+      </button>
+      <button type="button" onClick={() => setIndex(index - 1)} className="">
+        -
+      </button>
+      <h1>{index}</h1>
+      <button onClick={}>add</button>
+    </>
+    
   );
 }
