@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  background-color: grey;
 }
 .add-task-button {
   color: white;
@@ -153,4 +154,23 @@ input {
 .meter {
   margin: 0 0 0 auto;
   color: gray;
+}
+#add-button {
+  background-color: aqua;
+  position: "absolute";
+  border: "1px white solid";
+  width: 100px;
+  height: 40px;
+  margin-top: 60px;
+}
+#add-button:hover {
+  background-color: red;
+}
+#input {
+  height: "45px";
+  width: "300px";
+  background-color: white;
+  position: absolute;
+  /* border: "1px solid white"; */
+  color: white;
 }
