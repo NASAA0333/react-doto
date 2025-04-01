@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <button class="addTaskBtn" onclick="popup()">Add task</button>
+    <div id="taskFilter" style="display: none">
+      <div><label for="statusFilter">Filter by Status:</label></div>
+      <select id="statusFilter" onchange="filterTasksByStatus()">
+        <option value="to-do">To Do</option>
+        <option value="in-progress">In Progress</option>
+        <option value="done">Done</option>
+        <option value="blocked">Blocked</option>
+      </select>
+    </div>
+    <div id="taskContainerMain" class="taskContainerMain">
+      <div id="taskPopup" class="addTaskPopup">
+        <h1>Enter task</h1>
+
+        <div>
+          <input id="taskName" type="text" placeholder="Task name..." />
+        </div>
+
+        <div>
+          <label for="status">Select status</label>
+          <select name="status" id="statusSelect">
+            <option value="to-do">To Do</option>
+            <option value="in-progress">In Progress</option>
+            <option value="done">Done</option>
+            <option value="blocked">Blocked</option>
+          </select>
+        </div>
+
+        <button class="submitBtn" onclick="addTask(), closePopup()">
+          SUBMIT</button
+        ><button class="submitBtn" onclick="closePopup()">Cancel</button>
+      </div>
+
+      <div class="addTaskPopup" id="editTaskPopup" style="display: none">
+        <h1>Edit Task</h1>
+        <div>
+          <input type="text" id="editTaskName" />
+        </div>
+        <div>
+          <label for="editStatusSelect">Select status:</label>
+          <select id="editStatusSelect">
+            <option value="to-do">To Do</option>
+            <option value="in-progress">In Progress</option>
+            <option value="done">Done</option>
+            <option value="blocked">Blocked</option>
+          </select>
+        </div>
+        <div class="editCloseSection">
+          <button onclick="saveEditedTask()">Save Changes</button>
+          <button onclick="closeEditPopup()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>

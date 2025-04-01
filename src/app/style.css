@@ -1,8 +1,0 @@
-#add-button {
-  background-color: aquamarine;
-}
-#header {
-  display: "flex";
-  justify-content: "center";
-  flex-direction: "columns";
-}

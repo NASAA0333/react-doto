@@ -1,0 +1,126 @@
+// //status update
+// function statusUpdate(index, status) {
+//   let item = todos[index];
+//   item.status = status;
+//   console.log("update", todos);
+// }
+// //change name
+// function changeName(index, name) {
+//   let newName = todos[index];
+//   newName.name = name;
+//   console.log("nameChange", todos);
+// }
+// // delete one item
+// // function deleteOne(index) {
+// //   todos.splice(index, 1);
+// //   console.log("delete", todos);
+// // }
+// // function deleteOne(index) {
+// //   let newTodos = todos;
+// //   for (let i = 0; i < newTodos.length; i++) {
+// //     if (newTodos[index] !== newTodos[i]) {
+// //       newTodos.push(newTodos[i]);
+// //     }
+// //   }
+// //   console.log(newTodos);
+// // }
+// function deleteOne(index) {
+//   let newTodos = [];
+//   for (let i = 0; i < todos.length; i++) {
+//     if (todos[index] !== todos[i]) {
+//       newTodos.push(todos[i]);
+//     }
+//   }
+//   console.log(newTodos);
+// }
+// // // running application
+// // addOne({ name: "Hool hiih", status: "Done" });
+// // addOne({ name: "Usand oroh", status: "to do" });
+// // addOne({ name: "JS sudlah", status: "to do" });
+// // statusUpdate(1, "Done");
+// // changeName(1, "Untah");
+// // deleteOne(2);
+
+
+// let currentEditingTask = null; // To track the task being edited
+
+// function editTask(button) {
+//   // Get the task div and the current section
+//   currentEditingTask = button.parentElement;
+//   const taskName = currentEditingTask.children[0].innerText;
+
+//   // Open the edit popup and populate the fields
+//   document.getElementById("editTaskName").value = taskName;
+
+//   // Set the current status in the dropdown
+//   const currentSection = currentEditingTask.parentElement;
+//   let currentStatus = "";
+//   if (currentSection === section1) currentStatus = "to-do";
+//   else if (currentSection === section2) currentStatus = "in-progress";
+//   else if (currentSection === section3) currentStatus = "done";
+//   else if (currentSection === section4) currentStatus = "blocked";
+
+//   document.getElementById("editStatusSelect").value = currentStatus;
+
+//   // Show the edit popup
+//   document.getElementById("editTaskPopup").style.display = "block";
+// }
+
+// function closeEditPopup() {
+//   document.getElementById("editTaskPopup").style.display = "none";
+// }
+
+// function saveEditedTask() {
+//   // Get the updated values from the popup
+//   const newTaskName = document.getElementById("editTaskName").value;
+//   const newStatus = document.getElementById("editStatusSelect").value;
+
+//   // Update the task name
+//   currentEditingTask.children[0].innerText = newTaskName;
+
+//   // Determine the target section based on new status
+//   let targetSection;
+//   if (newStatus === "to-do") {
+//     targetSection = section1;
+//     taskCounter1++;
+//     counterPrint1.innerText = taskCounter1;
+//   } else if (newStatus === "in-progress") {
+//     targetSection = section2;
+//     taskCounter2++;
+//     counterPrint2.innerText = taskCounter2;
+//   } else if (newStatus === "done") {
+//     targetSection = section3;
+//     taskCounter3++;
+//     counterPrint3.innerText = taskCounter3;
+//   } else if (newStatus === "blocked") {
+//     targetSection = section4;
+//     taskCounter4++;
+//     counterPrint4.innerText = taskCounter4;
+//   }
+
+//   // Move the task if the status has changed
+//   const currentSection = currentEditingTask.parentElement;
+//   if (currentSection !== targetSection) {
+//     // Remove task from current section and adjust the counter
+//     currentSection.removeChild(currentEditingTask);
+//     if (currentSection === section1) {
+//       taskCounter1--;
+//       counterPrint1.innerText = taskCounter1;
+//     } else if (currentSection === section2) {
+//       taskCounter2--;
+//       counterPrint2.innerText = taskCounter2;
+//     } else if (currentSection === section3) {
+//       taskCounter3--;
+//       counterPrint3.innerText = taskCounter3;
+//     } else if (currentSection === section4) {
+//       taskCounter4--;
+//       counterPrint4.innerText = taskCounter4;
+//     }
+
+//     // Append the task to the target section
+//     targetSection.appendChild(currentEditingTask);
+//   }
+
+//   // Close the edit popup
+//   closeEditPopup();
+// }
