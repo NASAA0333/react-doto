@@ -22,27 +22,20 @@
     font-size: 4px !important;
   }
 }
-/* Default desktop styles */
 #taskFilter {
   display: none;
 }
-
 @media only screen and (max-width: 800px) {
   html {
     font-size: 6px !important;
   }
-  /* Show the filter dropdown on mobile */
   #taskFilter {
     display: block !important;
     margin-bottom: 10px;
   }
-
-  /* Hide all sections by default */
   section {
     display: none;
   }
-
-  /* Show only the selected section */
   .active-section {
     display: block;
   }
@@ -147,8 +140,6 @@ select {
 }
 .exitBtn {
   display: block;
-
-  /* cursor: pointer; */
 }
 .submitBtn {
   position: relative;
@@ -158,6 +149,8 @@ select {
   width: 14rem;
   height: 4rem;
   background: white;
+  margin-left: 20x;
+  margin-right: 20px;
 }
 .taskContainerHead {
   display: flex;
@@ -232,7 +225,6 @@ section {
   opacity: 0.5;
   color: #fff;
 }
-
 .addTaskBtn {
   width: 20rem;
   height: 8rem;

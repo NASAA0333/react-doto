@@ -23,18 +23,6 @@ sectionHeader1.setAttribute("class", "sectionHeader");
 sectionHeader2.setAttribute("class", "sectionHeader");
 sectionHeader3.setAttribute("class", "sectionHeader");
 sectionHeader4.setAttribute("class", "sectionHeader");
-// const statusBar1 = document.createElement("span");
-// const statusBar2 = document.createElement("span");
-// const statusBar3 = document.createElement("span");
-// const statusBar4 = document.createElement("span");
-// statusBar1.setAttribute("class", "statusBar1");
-// statusBar2.setAttribute("class", "statusBar2");
-// statusBar3.setAttribute("class", "statusBar3");
-// statusBar4.setAttribute("class", "statusBar4");
-// sectionHeader1.appendChild(statusBar1);
-// sectionHeader2.appendChild(statusBar2);
-// sectionHeader3.appendChild(statusBar3);
-// sectionHeader4.appendChild(statusBar4);
 sectionHeader1.innerHTML = "<div class='statusBar1'></div>" + "<h1> To do</h1>";
 sectionHeader2.innerHTML =
   "<div class='statusBar2'></div>" + "<h1> In progress</h1>";
@@ -123,15 +111,6 @@ function deleteTask(button) {
     counterPrint4.innerHTML = taskCounter4;
   }
 }
-
-// function editTask(button) {
-//   let taskDiv = button.parentElement;
-//   let taskName = prompt("Edit task name:", taskDiv.children[0].innerText);
-//   if (taskName) {
-//     taskDiv.children[0].innerText = taskName;
-//   }
-// }
-
 let currentEditingTask;
 function editTask(button) {
   currentEditingTask = button.parentElement;
